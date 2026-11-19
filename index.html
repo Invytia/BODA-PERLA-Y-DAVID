@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boda de Perla Daniela y David</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Pinyon+Script&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root{--black:#0d0809;--wine:#3b0c12;--wine2:#4d1119;--cream:#efe6da;--gold:#c5a059;--gold2:#e8d5a5;--ivory:#f6efe6;
+--serif:'Cormorant Garamond',serif;--script:'Pinyon Script',cursive;--sans:'Montserrat',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#1a1112;color:var(--ivory);font-family:var(--serif);overflow-x:hidden;font-size:18px}
+.wrap{max-width:560px;margin:0 auto;box-shadow:0 0 60px rgba(0,0,0,.6)}
+section{padding:56px 22px;text-align:center;position:relative}
+.eyebrow{font-family:var(--sans);font-size:.68rem;letter-spacing:4px;text-transform:uppercase;color:var(--gold2);font-weight:300}
+.script{font-family:var(--script);color:var(--gold);font-size:3rem;line-height:1.1}
+h2{font-weight:400;font-size:2.2rem;letter-spacing:3px;text-transform:uppercase;color:var(--ivory)}
+.orn{display:flex;align-items:center;justify-content:center;gap:14px;color:var(--gold);margin:22px auto;max-width:260px}
+.orn::before,.orn::after{content:"";height:1px;flex:1;background:var(--gold);opacity:.5}
+p{line-height:1.7}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--sans);font-size:.72rem;letter-spacing:3px;text-transform:uppercase;text-decoration:none;color:var(--gold2);border:1px solid var(--gold);padding:14px 26px;background:transparent;cursor:pointer;transition:.3s;margin-top:18px}
+.btn:hover{background:var(--gold);color:var(--black)}
+.btn.solid{background:var(--gold);color:var(--black)}
+.btn.solid:hover{background:transparent;color:var(--gold2)}
+.anim{opacity:0;transform:translateY(34px);transition:opacity 1.2s cubic-bezier(.22,1,.36,1),transform 1.2s cubic-bezier(.22,1,.36,1)}
+.anim.v{opacity:1;transform:none}
+/* sobre */
+#env{position:fixed;inset:0;z-index:9999;background:#0d0809 url('assets/fondo.jpg') center/cover;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 1s,visibility 1s}
+#env::before{content:"";position:absolute;inset:0;background:rgba(10,4,5,.55)}
+.ew{position:relative;width:320px;height:216px;cursor:pointer;perspective:1200px;z-index:2;transition:transform .4s}
+.ew:hover{transform:scale(1.04)}
+.eb{position:absolute;inset:0;background:#f1e7da;border-radius:3px;box-shadow:0 20px 50px rgba(0,0,0,.6)}
+.ef{position:absolute;inset:0;z-index:3;border-left:160px solid #e6d9c8;border-right:160px solid #e6d9c8;border-bottom:110px solid #dccdb9;border-top:106px solid transparent;pointer-events:none}
+.fl{position:absolute;top:0;left:0;border-left:160px solid transparent;border-right:160px solid transparent;border-top:120px solid #f6eee2;transform-origin:top;transition:transform .8s;z-index:4}
+.seal{position:absolute;top:-34px;left:-24px;width:52px;height:52px;border-radius:50%;background:var(--wine);border:1px solid var(--gold);color:var(--gold);font-family:var(--script);font-size:1.4rem;display:flex;align-items:center;justify-content:center;z-index:5;transition:opacity .3s}
+.ew.open .fl{transform:rotateX(180deg);z-index:1}.ew.open .seal{opacity:0}
+.et{position:relative;z-index:2;margin-top:46px;color:var(--gold2);font-family:var(--sans);font-size:.75rem;letter-spacing:5px;text-transform:uppercase;animation:pl 2.5s infinite}
+@keyframes pl{50%{opacity:.4}}
+#audio-btn{position:fixed;bottom:22px;right:22px;width:52px;height:52px;border-radius:50%;background:var(--wine);color:var(--gold);border:1px solid var(--gold);z-index:9000;display:none;align-items:center;justify-content:center;cursor:pointer;font-size:1.1rem}
+#main{visibility:hidden;opacity:0;transition:opacity 1.5s}
+/* hero */
+.hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(rgba(10,4,5,.45),rgba(10,4,5,.7)),url('assets/f2.jpg') center/cover,radial-gradient(circle at 30% 30%,#5a1019,#0d0809)}
+.mono{display:block;width:130px;height:130px;margin:0 auto 22px}
+.names{margin:22px 0}
+.names .n{display:block;font-size:clamp(2rem,10.5vw,3.4rem);letter-spacing:3px;text-transform:uppercase;font-weight:400;line-height:1.15}
+.names .a{display:block;font-family:var(--script);font-size:3rem;color:var(--gold);margin:-4px 0}
+.welcome{background:linear-gradient(var(--wine),var(--wine2))}
+.welcome p{max-width:560px;margin:14px auto 0;font-size:1.05rem}
+.parents{margin-top:34px}.parents>div{margin-bottom:28px}
+.parents h4{font-family:var(--sans);font-weight:400;font-size:.68rem;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:8px}
+.parents p{font-style:italic;font-size:1.08rem}
+.photo{width:100%;max-width:520px;margin:34px auto 0;display:block;border:1px solid rgba(197,160,89,.4);cursor:zoom-in}
+/* fecha */
+.date{background:var(--black)}
+.big{font-size:clamp(2.2rem,8vw,3.6rem);letter-spacing:4px;color:var(--gold2);margin:8px 0}
+.cal{max-width:330px;margin:28px auto;font-family:var(--sans);font-size:.82rem}
+.cal .m{letter-spacing:4px;text-transform:uppercase;margin-bottom:14px}
+.g{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.g .h{color:var(--gold);font-size:.68rem;padding-bottom:6px;border-bottom:1px solid rgba(197,160,89,.3);margin-bottom:6px}
+.g .d{padding:8px 0}.g .d.hl{background:var(--gold);color:var(--black);border-radius:50%;font-weight:500}
+.timer{display:flex;justify-content:center;gap:clamp(14px,5vw,40px);margin:30px 0;padding:24px 0;border-top:1px solid rgba(197,160,89,.4);border-bottom:1px solid rgba(197,160,89,.4)}
+.timer span{display:flex;flex-direction:column;align-items:center;font-family:var(--sans);font-size:.62rem;letter-spacing:3px;color:var(--gold2)}
+.timer b{font-family:var(--serif);font-weight:400;font-size:2.6rem;color:var(--ivory);line-height:1;margin-bottom:6px}
+/* lugares */
+.venues{background:linear-gradient(var(--wine2),var(--wine))}
+.vgrid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:30px}
+.vc{background:rgba(13,8,9,.55);border:1px solid rgba(197,160,89,.35);padding:28px 16px}
+.vc i.ic{font-size:1.8rem;color:var(--gold);margin-bottom:12px}
+.vc h3{font-weight:500;font-size:1.7rem;margin:8px 0}
+.vc .t{font-family:var(--sans);letter-spacing:3px;color:var(--gold2);margin-bottom:6px}
+.vc .ad{font-size:.98rem;opacity:.85;font-style:italic;margin-bottom:16px}
+.vc iframe{width:100%;height:210px;border:1px solid rgba(197,160,89,.3);filter:grayscale(.3) contrast(1.05)}
+/* dress + programa */
+.dress{background:var(--wine);padding:60px 30px;border-bottom:1px solid rgba(197,160,89,.3)}
+.dress .big{font-family:var(--serif);font-style:normal;margin:10px 0}
+.prog{background:#17100f}
+.tl{margin:34px auto 0;max-width:320px;text-align:left;position:relative;padding-left:34px}
+.tl::before{content:"";position:absolute;left:11px;top:8px;bottom:8px;width:1px;background:rgba(197,160,89,.5)}
+.ti{position:relative;margin-bottom:26px}
+.ti::before{content:"";position:absolute;left:-28px;top:9px;width:9px;height:9px;border-radius:50%;background:var(--gold)}
+.ti i{float:left;width:34px;font-size:1.25rem;color:var(--gold);margin-top:2px}
+.ti .h{font-family:var(--sans);font-size:.85rem;letter-spacing:1px;margin-left:34px}
+.ti .e{font-family:var(--serif);font-size:1.15rem;font-style:italic;color:var(--gold2);margin-left:34px}
+/* galería */
+.gal{background:var(--black)}
+.gg{display:grid;grid-template-columns:1fr;gap:12px;margin-top:28px}
+.gg img{width:100%;height:340px;object-fit:cover;cursor:zoom-in;border:1px solid rgba(197,160,89,.25);transition:.3s}
+.gg img:hover{transform:scale(1.02)}
+/* extras */
+.extra{background:linear-gradient(var(--wine),var(--wine2))}
+.box{max-width:520px;margin:30px auto 0;padding:30px 22px;border:1px solid rgba(197,160,89,.4);background:rgba(13,8,9,.4)}
+.qr{width:150px;height:150px;background:#fff;padding:6px;border:2px solid var(--gold);margin:20px 0 0}
+iframe.sp{margin-top:20px;border-radius:12px}
+/* forms */
+.rsvp{background:var(--cream);color:#2c1d1a}
+.rsvp h2{color:#2c1d1a}.rsvp .eyebrow{color:#8a6a2f}
+.fb{max-width:520px;margin:30px auto 0;background:#fff;padding:36px 26px;border:1px solid rgba(197,160,89,.5);text-align:left}
+.fg{margin-bottom:22px}
+.fg label.l{display:block;font-family:var(--sans);font-size:.68rem;letter-spacing:3px;text-transform:uppercase;margin-bottom:6px}
+.fg input[type=text],.fg select,.fg textarea{width:100%;padding:10px 0;border:0;border-bottom:1px solid #ccc;background:transparent;font-family:var(--serif);font-size:1.1rem;outline:0;color:#2c1d1a}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-bottom-color:var(--gold)}
+.pg{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:12px 0;border-bottom:1px solid #e3e3e3}
+.pg label{margin-left:14px;cursor:pointer;font-size:1rem}.pg input{accent-color:var(--wine)}
+.wa{width:100%;background:var(--wine);color:#fff;border:0;padding:16px;font-family:var(--sans);font-size:.75rem;letter-spacing:3px;text-transform:uppercase;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;transition:.3s}
+.wa:hover{background:var(--gold);color:var(--black)}
+.dl{font-family:var(--sans);font-size:.65rem;letter-spacing:3px;text-align:center;margin-top:20px;color:#6b5a52}
+#pase{display:none;text-align:center;border-bottom:1px dashed var(--gold);padding-bottom:20px;margin-bottom:24px}
+#pase h3{font-weight:500;font-size:1.8rem;color:var(--wine)}
+footer{background:var(--black);text-align:center;padding:34px 20px;border-top:1px solid rgba(197,160,89,.3)}
+footer p{font-family:var(--sans);font-size:.6rem;letter-spacing:5px;color:var(--gold2)}
+#lb{position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:10000;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:.3s}
+#lb.a{opacity:1;visibility:visible}#lb img{max-width:95%;max-height:90vh}
+#lb button{position:absolute;top:20px;right:25px;font-size:2.4rem;color:#fff;background:none;border:0;cursor:pointer}
+</style>
+</head>
+<body>
+<audio id="bg" loop><source src="assets/song.mp3" type="audio/mpeg"></audio>
+<div id="lb" onclick="this.classList.remove('a')"><button>&times;</button><img id="lbi" src="" alt="" onclick="event.stopPropagation()"></div>
+
+<div id="env">
+  <div class="ew" onclick="openInv()">
+    <div class="ef"></div>
+    <div class="fl"><div class="seal">P&amp;D</div></div>
+    <div class="eb"></div>
+  </div>
+  <div class="et">Toca para abrir</div>
+</div>
+<button id="audio-btn" onclick="toggleAudio()"><i class="fa-solid fa-music" id="ai"></i></button>
+
+<div id="main"><div class="wrap">
+
+<!-- HERO -->
+<section class="hero">
+  <svg class="mono anim" viewBox="0 0 200 200" aria-label="P&amp;D">
+  <circle cx="100" cy="100" r="93" fill="none" stroke="#c5a059" stroke-width="1.2"/>
+  <circle cx="100" cy="100" r="88" fill="none" stroke="#c5a059" stroke-width=".5"/>
+  <g id="br" fill="#c5a059" opacity=".92">
+    <path d="M92.7 169.6 A70 70 0 0 1 38.2 67.1" fill="none" stroke="#c5a059" stroke-width="1"/>
+    <ellipse cx="82.0" cy="173.4" rx="8.5" ry="3.1" transform="rotate(158 82.0 173.4)"/><ellipse cx="83.9" cy="162.8" rx="8.5" ry="3.1" transform="rotate(222 83.9 162.8)"/><ellipse cx="65.9" cy="167.5" rx="8.5" ry="3.1" transform="rotate(171 65.9 167.5)"/><ellipse cx="70.2" cy="157.5" rx="8.5" ry="3.1" transform="rotate(235 70.2 157.5)"/><ellipse cx="51.6" cy="158.1" rx="8.5" ry="3.1" transform="rotate(184 51.6 158.1)"/><ellipse cx="58.0" cy="149.3" rx="8.5" ry="3.1" transform="rotate(248 58.0 149.3)"/><ellipse cx="39.8" cy="145.7" rx="8.5" ry="3.1" transform="rotate(197 39.8 145.7)"/><ellipse cx="48.0" cy="138.6" rx="8.5" ry="3.1" transform="rotate(261 48.0 138.6)"/><ellipse cx="31.1" cy="131.0" rx="8.5" ry="3.1" transform="rotate(210 31.1 131.0)"/><ellipse cx="40.6" cy="125.9" rx="8.5" ry="3.1" transform="rotate(274 40.6 125.9)"/><ellipse cx="25.9" cy="114.7" rx="8.5" ry="3.1" transform="rotate(223 25.9 114.7)"/><ellipse cx="36.3" cy="111.9" rx="8.5" ry="3.1" transform="rotate(287 36.3 111.9)"/><ellipse cx="24.5" cy="97.6" rx="8.5" ry="3.1" transform="rotate(236 24.5 97.6)"/><ellipse cx="35.3" cy="97.3" rx="8.5" ry="3.1" transform="rotate(300 35.3 97.3)"/><ellipse cx="26.9" cy="80.7" rx="8.5" ry="3.1" transform="rotate(249 26.9 80.7)"/><ellipse cx="37.5" cy="82.8" rx="8.5" ry="3.1" transform="rotate(313 37.5 82.8)"/><ellipse cx="33.2" cy="64.8" rx="8.5" ry="3.1" transform="rotate(262 33.2 64.8)"/><ellipse cx="43.0" cy="69.2" rx="8.5" ry="3.1" transform="rotate(326 43.0 69.2)"/><ellipse cx="40.0" cy="63.9" rx="9" ry="3.2" transform="rotate(301 40.0 63.9)"/>
+  </g>
+  <use href="#br" transform="translate(200 0) scale(-1 1)"/>
+  <text x="100" y="118" text-anchor="middle" font-family="Cormorant Garamond,serif" font-weight="500" fill="#e8d5a5" font-size="58" letter-spacing="2">P<tspan font-size="26" font-style="italic" fill="#c5a059" dx="4" dy="-4">&amp;</tspan><tspan dx="4" dy="4">D</tspan></text>
+</svg>
+  <p class="eyebrow anim">Junto con nuestras familias</p>
+  <div class="names anim" style="transition-delay:.2s">
+    <span class="n">Perla Daniela</span><span class="a">y</span><span class="n">David</span>
+  </div>
+  <p class="eyebrow anim" style="transition-delay:.4s;line-height:2">Tenemos el honor de invitarte<br>a celebrar nuestra boda</p>
+  <div class="orn anim"><i class="fa-solid fa-leaf"></i></div>
+</section>
+
+<!-- BIENVENIDA -->
+<section class="welcome">
+  <div class="script anim">Bienvenidos</div>
+  <p class="anim">Estamos felices de compartir este capítulo tan especial rodeados de las personas que más queremos. Acompáñanos a celebrar un día lleno de amor, risas y recuerdos inolvidables.</p>
+  <img src="assets/1.jpg" class="photo anim" onclick="lb(this.src)" alt="Perla y David" onerror="this.remove()">
+  <div class="orn anim"><i class="fa-solid fa-heart" style="font-size:.7rem"></i></div>
+  <p class="script anim" style="font-size:2.2rem">Con la bendición de nuestros padres</p>
+  <div class="parents anim">
+    <div><h4>Padres de la novia</h4><p>Laura Castillo Peña</p><p>Daniel Aguilar González</p></div>
+    <div><h4>Madre del novio</h4><p>Carmen Rojo Chavarin</p></div>
+    <div><h4>Padrinos</h4><p>Gabriela Castillo Peña</p><p>José Antonio Velasco</p></div>
+  </div>
+</section>
+
+<!-- FECHA -->
+<section class="date">
+  <p class="eyebrow anim">Reserva la fecha</p>
+  <div class="big anim">27 &bull; 02 &bull; 2027</div>
+  <p class="eyebrow anim">Sábado</p>
+  <div class="cal anim">
+    <div class="m">Febrero 2027</div>
+    <div class="g">
+      <div class="h">DOM</div><div class="h">LUN</div><div class="h">MAR</div><div class="h">MIE</div><div class="h">JUE</div><div class="h">VIE</div><div class="h">SAB</div>
+      <div></div><div class="d">1</div><div class="d">2</div><div class="d">3</div><div class="d">4</div><div class="d">5</div><div class="d">6</div>
+      <div class="d">7</div><div class="d">8</div><div class="d">9</div><div class="d">10</div><div class="d">11</div><div class="d">12</div><div class="d">13</div>
+      <div class="d">14</div><div class="d">15</div><div class="d">16</div><div class="d">17</div><div class="d">18</div><div class="d">19</div><div class="d">20</div>
+      <div class="d">21</div><div class="d">22</div><div class="d">23</div><div class="d">24</div><div class="d">25</div><div class="d">26</div><div class="d hl">27</div>
+      <div class="d">28</div>
+    </div>
+  </div>
+  <div class="anim"><div class="script" style="font-size:2.2rem">Faltan</div>
+    <div class="timer" id="timer"><span><b id="dd">00</b>DÍAS</span><span><b id="hh">00</b>HRS</span><span><b id="mm">00</b>MIN</span><span><b id="ss">00</b>SEG</span></div>
+  </div>
+  <button class="btn anim" onclick="downloadICS()"><i class="fa-regular fa-calendar-plus"></i> Agregar al calendario</button>
+</section>
+
+<!-- UBICACIONES -->
+<section class="venues">
+  <div class="script anim">Dónde &amp; cuándo</div>
+  <div class="vgrid">
+    <div class="vc anim">
+      <i class="fa-solid fa-church ic"></i><p class="eyebrow">Ceremonia religiosa</p>
+      <h3>Parroquia Nuestra Señora del Refugio</h3>
+      <p class="t">4:00 P.M.</p>
+      <p class="ad">C. Perú s/n, 5 de Diciembre, 48350 Puerto Vallarta, Jal.</p>
+      <iframe loading="lazy" allowfullscreen src="https://www.google.com/maps?q=Parroquia+Nuestra+Se%C3%B1ora+del+Refugio,+C.+Per%C3%BA+s/n,+5+de+Diciembre,+48350+Puerto+Vallarta,+Jal.&output=embed"></iframe>
+      <a class="btn solid" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Parroquia+Nuestra+Se%C3%B1ora+del+Refugio,+C.+Per%C3%BA+s/n,+5+de+Diciembre,+48350+Puerto+Vallarta,+Jal."><i class="fa-solid fa-location-dot"></i> Ubicación exacta</a>
+    </div>
+    <div class="vc anim" style="transition-delay:.15s">
+      <i class="fa-solid fa-champagne-glasses ic"></i><p class="eyebrow">Recepción</p>
+      <h3>Terraza María Bonita</h3>
+      <p class="t">6:00 P.M.</p>
+      <p class="ad">Filipinas 1137, Col. La Trinidad, 48290 Puerto Vallarta, Jal.</p>
+      <iframe loading="lazy" allowfullscreen src="https://www.google.com/maps?q=Terraza+Mar%C3%ADa+Bonita,+Filipinas+1137,+La+Trinidad,+48290+Puerto+Vallarta,+Jal.&output=embed"></iframe>
+      <a class="btn solid" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Terraza+Mar%C3%ADa+Bonita,+Filipinas+1137,+La+Trinidad,+48290+Puerto+Vallarta,+Jal."><i class="fa-solid fa-location-dot"></i> Ubicación exacta</a>
+    </div>
+  </div>
+</section>
+
+<!-- DRESS CODE -->
+<section class="dress">
+  <p class="eyebrow anim">Código de vestimenta</p>
+  <div class="big anim">Casual Formal</div>
+  <p class="script anim" style="font-size:2rem">con un toque de romance</p>
+</section>
+
+<!-- PROGRAMA -->
+<section class="prog">
+  <div class="script anim">El Día</div>
+  <div class="tl anim">
+    <div class="ti"><i class="fa-solid fa-church"></i><div class="h">4:00 PM</div><div class="e">Ceremonia</div></div>
+    <div class="ti"><i class="fa-solid fa-champagne-glasses"></i><div class="h">6:00 PM</div><div class="e">Recepción</div></div>
+    <div class="ti"><i class="fa-solid fa-heart"></i><div class="h">6:15 PM</div><div class="e">Llegada de los novios</div></div>
+    <div class="ti"><i class="fa-solid fa-utensils"></i><div class="h">7:00 PM</div><div class="e">Cena</div></div>
+    <div class="ti"><i class="fa-solid fa-ring"></i><div class="h">8:00 PM</div><div class="e">Baile de los novios</div></div>
+    <div class="ti"><i class="fa-solid fa-music"></i><div class="h">10:00 PM</div><div class="e">Inicia el baile</div></div>
+  </div>
+</section>
+
+<!-- GALERÍA -->
+<section class="gal">
+  <div class="script anim">Nuestra historia</div>
+  <p class="anim" style="font-style:italic">Coleccionando momentos inolvidables…</p>
+  <div class="gg anim">
+    <img src="assets/2.jpg" onclick="lb(this.src)" alt="" onerror="this.remove()">
+    <img src="assets/3.jpg" onclick="lb(this.src)" alt="" onerror="this.remove()">
+    <img src="assets/4.jpg" onclick="lb(this.src)" alt="" onerror="this.remove()">
+    <img src="assets/5.jpg" onclick="lb(this.src)" alt="" onerror="this.remove()">
+    <img src="assets/6.jpg" onclick="lb(this.src)" alt="" onerror="this.remove()">
+    <img src="assets/7.jpg" onclick="lb(this.src)" alt="" onerror="this.remove()">
+  </div>
+</section>
+
+<!-- EXTRAS -->
+<section class="extra">
+  <h2 class="anim">Mesa de regalos</h2>
+  <div class="orn anim"><i class="fa-solid fa-gift"></i></div>
+  <p class="anim">Su presencia es nuestro mejor regalo. Si desean tener un detalle adicional con nosotros:</p>
+  <div class="box anim"><i class="fa-regular fa-envelope" style="color:var(--gold);font-size:1.6rem"></i><p class="eyebrow" style="margin-top:10px">Lluvia de sobres</p><p style="font-style:italic;margin-top:6px">Habrá un buzón disponible durante el evento.</p></div>
+
+  <h2 class="anim" style="margin-top:70px">Galería en vivo</h2>
+  <div class="orn anim"><i class="fa-solid fa-camera-retro"></i></div>
+  <p class="anim">¡Queremos ver la boda a través de tus ojos! Escanea para compartir tus fotos y videos.</p>
+  <img class="qr anim" alt="QR Galería" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://drive.google.com/drive/folders/1oUn0KPwzPgv0EAophlAwmt_BspmMPsoM?usp=sharing"><br>
+  <a class="btn anim" target="_blank" href="https://drive.google.com/drive/folders/1oUn0KPwzPgv0EAophlAwmt_BspmMPsoM?usp=sharing"><i class="fa-brands fa-google-drive"></i> Subir mis fotos</a>
+
+  <h2 class="anim" style="margin-top:70px">Nuestra playlist</h2>
+  <div class="orn anim"><i class="fa-brands fa-spotify"></i></div>
+  <p class="anim">Ayúdanos a armar la fiesta: agrega las canciones que no pueden faltar.</p>
+  <iframe class="sp anim" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3EOEHWVxiTW9aqUDVLQ4HB?utm_source=generator&si=314c2f642c994b10" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe><br>
+  <a class="btn anim" target="_blank" href="https://open.spotify.com/playlist/3EOEHWVxiTW9aqUDVLQ4HB?si=aec4978a0f8549c4&pt=4193fa0cd1bddaa8a363148bd7c7ea44"><i class="fa-brands fa-spotify"></i> Agregar canciones</a>
+</section>
+
+<!-- RSVP -->
+<section class="rsvp">
+  <h2 class="anim">R.S.V.P.</h2>
+  <p class="eyebrow anim" style="margin-top:6px">Confirmación de asistencia</p>
+  <div class="fb anim">
+    <div id="pase">
+      <p class="eyebrow" style="color:#8a6a2f">Pase personal</p>
+      <h3 id="gn">Invitado</h3>
+      <p>Lugares reservados: <b id="gp" style="color:var(--gold);font-size:1.4rem"></b></p>
+      <p style="font-size:.9rem;font-style:italic;margin-top:10px">Los lugares han sido reservados especialmente para ti. Los boletos son únicos e intransferibles.</p>
+    </div>
+    <div id="gen">
+      <div class="fg"><label class="l">Nombre del titular</label><input type="text" id="rn" placeholder="Escribe tu nombre completo"></div>
+      <div class="fg"><label class="l">Respuesta</label>
+        <select id="ra"><option value="">Selecciona una opción</option><option value="¡Sí, asistiré con gusto!">¡Sí, asistiré con gusto!</option><option value="Lamentablemente no podré asistir">Lamento no poder acompañarlos</option></select></div>
+    </div>
+    <div id="dyn"></div>
+    <button type="button" class="wa" onclick="sendRSVP()"><i class="fa-brands fa-whatsapp" style="font-size:1.2rem"></i> Confirmar vía WhatsApp</button>
+    <p class="dl">CONFIRMAR ANTES DEL 11 DE FEBRERO</p>
+  </div>
+
+  <div class="fb anim">
+    <p class="script" style="color:var(--wine);text-align:center;font-size:2.6rem">Libro de firmas</p>
+    <p style="text-align:center;margin:8px 0 22px">Nos encantaría atesorar tus palabras. Déjanos un mensaje para recordar este día por siempre.</p>
+    <div class="fg"><label class="l">Tu nombre</label><input type="text" id="wn" placeholder="Tu nombre"></div>
+    <div class="fg"><textarea id="wt" rows="3" placeholder="Con cariño para Perla y David…"></textarea></div>
+    <button type="button" class="wa" onclick="sendWishes()"><i class="fa-solid fa-paper-plane"></i> Enviar mensaje</button>
+  </div>
+</section>
+
+<footer><p>INVYTIA VIP DESIGN</p></footer>
+</div></div>
+
+<script>
+const WA="523111442262";
+// Pega aquí la URL de tu Apps Script (Implementar > Aplicación web). Si está vacía, solo se envía por WhatsApp.
+const SCRIPT_URL="";
+const bg=document.getElementById('bg'),ai=document.getElementById('ai');
+let opened=false;
+function openInv(){
+  if(opened)return;opened=true;
+  document.querySelector('.ew').classList.add('open');
+  bg.play().then(()=>{ai.className='fa-solid fa-pause'}).catch(()=>{});
+  setTimeout(()=>{
+    const e=document.getElementById('env'),m=document.getElementById('main');
+    e.style.opacity=0;m.style.visibility='visible';m.style.opacity=1;
+    document.getElementById('audio-btn').style.display='flex';
+    setTimeout(()=>e.style.display='none',1000);
+    initAnim();
+  },900);
+}
+function toggleAudio(){
+  if(bg.paused){bg.play();ai.className='fa-solid fa-pause'}else{bg.pause();ai.className='fa-solid fa-music'}
+}
+function lb(s){document.getElementById('lbi').src=s;document.getElementById('lb').classList.add('a')}
+function initAnim(){
+  const o=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('v');o.unobserve(x.target)}}),{threshold:.12});
+  document.querySelectorAll('.anim').forEach(el=>o.observe(el));
+}
+// Invitado por URL: ?invitado=Nombre&pases=2&nombres=Ana,Luis
+const q=new URLSearchParams(location.search);
+const inv=q.get('invitado'),pases=q.get('pases')||q.get('p'),nombres=q.get('nombres')?q.get('nombres').split(','):[];
+if(pases){
+  document.getElementById('pase').style.display='block';
+  document.getElementById('gn').textContent=inv||'Pase especial';
+  document.getElementById('gp').textContent=pases;
+}
+if(nombres.length){
+  let h='<label class="l" style="display:block;font-family:var(--sans);font-size:.68rem;letter-spacing:3px;margin-bottom:10px">SELECCIONA QUIÉNES ASISTEN:</label>';
+  nombres.forEach((n,i)=>{h+=`<div class="pg"><span class="gname">${n.trim()}</span><div><label><input type="radio" name="a${i}" value="Sí"> Sí</label><label><input type="radio" name="a${i}" value="No"> No</label></div></div>`});
+  document.getElementById('dyn').innerHTML=h;document.getElementById('gen').style.display='none';
+}
+// Cuenta regresiva: 27 feb 2027, 4:00 p.m.
+const target=new Date("Feb 27, 2027 16:00:00").getTime();
+const iv=setInterval(()=>{
+  const d=target-Date.now();
+  if(d<0){clearInterval(iv);document.getElementById('timer').innerHTML='<span style="font-size:1.8rem;letter-spacing:2px">¡HOY ES EL GRAN DÍA!</span>';return}
+  const p=n=>String(n).padStart(2,'0');
+  dd.textContent=p(Math.floor(d/864e5));hh.textContent=p(Math.floor(d%864e5/36e5));
+  mm.textContent=p(Math.floor(d%36e5/6e4));ss.textContent=p(Math.floor(d%6e4/1e3));
+},1000);
+function toSheet(data){
+  if(!SCRIPT_URL)return;
+  try{fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(data)})}catch(e){}
+}
+function sendRSVP(){
+  let msg="",data={tipo:'confirmacion'};
+  const rows=document.querySelectorAll('#dyn .gname');
+  if(rows.length){
+    const ok=[],no=[];let all=true;
+    rows.forEach((s,i)=>{const o=document.querySelector(`input[name="a${i}"]:checked`);if(!o)all=false;else(o.value==='Sí'?ok:no).push(s.textContent.trim())});
+    if(!all){alert("Por favor, selecciona si asiste o no cada persona de la lista.");return}
+    const n=inv||'Invitado';
+    msg=`¡Hola! Somos la familia / acompañantes de *${n}* y esta es nuestra confirmación:\n\n`;
+    if(ok.length)msg+=`✅ *Asistirán con gusto:*\n- ${ok.join('\n- ')}\n\n`;
+    if(no.length)msg+=`❌ *Lamentablemente no podrán asistir:*\n- ${no.join('\n- ')}\n\n`;
+    Object.assign(data,{nombre:n,asistiran:ok.join(', '),no_asistiran:no.join(', ')});
+  }else{
+    const n=rn.value.trim(),a=ra.value;
+    if(!n||!a){alert("Por favor, completa tu nombre y tu respuesta.");return}
+    msg=`Hola, soy *${n}*.\n\nQuiero confirmar mi respuesta a la boda de Perla y David: *${a}*\n\n`;
+    Object.assign(data,{nombre:n,asistiran:a.startsWith('¡Sí')?n:'',no_asistiran:a.startsWith('¡Sí')?'':n});
+  }
+  toSheet(data);
+  window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`,'_blank');
+}
+function sendWishes(){
+  const t=wt.value.trim(),n=wn.value.trim();
+  if(!t){alert("Por favor, escribe un mensaje primero.");return}
+  toSheet({tipo:'mensaje',nombre:n,mensaje:t});
+  window.open(`https://wa.me/${WA}?text=${encodeURIComponent(`¡Hola Perla y David! Les dejo este mensaje para su libro de firmas:\n\n"${t}"${n?`\n\n— ${n}`:''}`)}`,'_blank');
+}
+function downloadICS(){
+  const c=`BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//Boda Perla y David//ES\nBEGIN:VEVENT\nDTSTART:20270227T220000Z\nDTEND:20270228T080000Z\nSUMMARY:Boda de Perla Daniela y David\nLOCATION:Parroquia Nuestra Señora del Refugio\\, Puerto Vallarta\nDESCRIPTION:Ceremonia 4:00 PM. Recepción 6:00 PM en Terraza María Bonita.\nEND:VEVENT\nEND:VCALENDAR`;
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([c],{type:'text/calendar;charset=utf-8'}));
+  a.download='Boda_Perla_y_David.ics';document.body.appendChild(a);a.click();a.remove();
+}
+</script>
+</body>
+</html>
